@@ -1,0 +1,185 @@
+{
+ "version": 1,
+ "generator": "cs.chicken tests/fixtures/generate_fixtures.py",
+ "note": "Test chickens made from scratch, no game assets.",
+ "chickens": [
+  {
+   "id": "demo_hen_white",
+   "name": "Demo Hen",
+   "kind": "CHICKEN",
+   "breed": "Demo",
+   "variant": "White",
+   "model": "models/demo_hen.glb",
+   "icon": "",
+   "slots": {
+    "hen_body_white": "materials/demo/hen_body_white.vmat",
+    "hen_comb": "materials/demo/hen_comb.vmat"
+   },
+   "def_index": 90,
+   "tags": [
+    "chicken_demo_01"
+   ],
+   "skeleton": "animation/skeletons/demo/demo_hen.vnmskel",
+   "age_scale": [
+    0.3,
+    0.5
+   ]
+  },
+  {
+   "id": "demo_hen_black",
+   "name": "Demo Hen",
+   "kind": "CHICKEN",
+   "breed": "Demo",
+   "variant": "Black",
+   "model": "models/demo_hen.glb",
+   "icon": "",
+   "slots": {
+    "hen_body_white": "materials/demo/hen_body_black.vmat",
+    "hen_comb": "materials/demo/hen_comb.vmat"
+   },
+   "def_index": 90,
+   "tags": [
+    "chicken_demo_01"
+   ],
+   "skeleton": "animation/skeletons/demo/demo_hen.vnmskel",
+   "age_scale": [
+    0.3,
+    0.5
+   ]
+  },
+  {
+   "id": "demo_egg",
+   "name": "Demo Egg",
+   "kind": "EGG",
+   "breed": "",
+   "variant": "",
+   "model": "models/demo_egg.glb",
+   "icon": "",
+   "slots": {
+    "egg_shell": "materials/demo/egg_shell.vmat"
+   },
+   "def_index": 91,
+   "tags": [
+    "chicken_egg_01"
+   ],
+   "skeleton": ""
+  },
+  {
+   "id": "demo_missing",
+   "name": "Demo Missing",
+   "kind": "PROP",
+   "model": "models/nope.glb",
+   "slots": {},
+   "tags": []
+  }
+ ],
+ "materials": {
+  "materials/demo/hen_body_white.vmat": {
+   "shader": "csgo_character.vfx",
+   "params": {
+    "F_TINT_MASK": 1,
+    "F_ANISOTROPIC_GLOSS": 1,
+    "g_fHueShift": 0.0,
+    "g_fSaturation": 1.0,
+    "g_fBrightness": 1.0,
+    "g_fContrast": 1.0,
+    "g_vColorTint": [
+     1,
+     1,
+     1,
+     0
+    ]
+   },
+   "dynamic": {},
+   "textures": {
+    "TextureColor": "textures/demo_hen_white.png",
+    "TextureNormal": "textures/demo_normal.png",
+    "TextureTintMask": "textures/demo_tint.png",
+    "g_tAnisoGloss": "textures/demo_gloss.png"
+   },
+   "constants": {}
+  },
+  "materials/demo/hen_body_black.vmat": {
+   "shader": "csgo_character.vfx",
+   "params": {
+    "F_TINT_MASK": 1,
+    "F_ANISOTROPIC_GLOSS": 1,
+    "g_fHueShift": 0.0,
+    "g_fSaturation": 1.0,
+    "g_fBrightness": 1.2,
+    "g_fContrast": 1.0,
+    "g_vColorTint": [
+     1,
+     1,
+     1,
+     0
+    ]
+   },
+   "dynamic": {},
+   "textures": {
+    "TextureColor": "textures/demo_hen_black.png",
+    "TextureNormal": "textures/demo_normal.png",
+    "TextureTintMask": "textures/demo_tint.png",
+    "g_tAnisoGloss": "textures/demo_gloss.png"
+   },
+   "constants": {}
+  },
+  "materials/demo/hen_comb.vmat": {
+   "shader": "csgo_character.vfx",
+   "params": {
+    "F_TINT_MASK": 0,
+    "F_ANISOTROPIC_GLOSS": 1,
+    "g_fHueShift": 0.0,
+    "g_fSaturation": 1.0,
+    "g_fBrightness": 1.0,
+    "g_fContrast": 1.0,
+    "g_vColorTint": [
+     1,
+     1,
+     1,
+     0
+    ]
+   },
+   "dynamic": {},
+   "textures": {
+    "TextureColor": "textures/demo_comb.png",
+    "TextureNormal": "textures/demo_normal.png",
+    "TextureTintMask": "textures/demo_tint.png",
+    "g_tAnisoGloss": "textures/demo_gloss.png"
+   },
+   "constants": {}
+  },
+  "materials/demo/egg_shell.vmat": {
+   "shader": "csgo_character.vfx",
+   "params": {
+    "F_TINT_MASK": 1,
+    "g_fHueShift": 0.0,
+    "g_fBrightness": 1.0
+   },
+   "dynamic": {
+    "g_fHueShift": "return lerp(-12,165,$egg_hue*$egg_hue);",
+    "g_fBrightness": "return lerp(.8,1.2,$egg_brightness);"
+   },
+   "textures": {
+    "TextureColor": "textures/demo_egg.png",
+    "TextureNormal": "textures/demo_normal.png",
+    "TextureTintMask": "textures/demo_tint.png"
+   },
+   "constants": {
+    "TextureRoughness": [
+     0.6,
+     0.6,
+     0.6,
+     1.0
+    ]
+   }
+  },
+  "materials/demo/unsupported.vmat": {
+   "shader": "csgo_complex.vfx",
+   "params": {},
+   "dynamic": {},
+   "textures": {},
+   "constants": {}
+  }
+ }
+}
